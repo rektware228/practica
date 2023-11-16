@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище UchPr2_3NFModelContainer" CdmEntityContainer="UchPr2_3NFEntities">
+    <EntitySetMapping Name="Academics">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Academics">
+        <MappingFragment StoreEntitySet="Academics">
+          <ScalarProperty Name="ID_academics" ColumnName="ID_academics" />
+          <ScalarProperty Name="FIO" ColumnName="FIO" />
+          <ScalarProperty Name="date_of_birth" ColumnName="date_of_birth" />
+          <ScalarProperty Name="specialization" ColumnName="specialization" />
+          <ScalarProperty Name="year_rank" ColumnName="year_rank" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Application">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Application">
+        <MappingFragment StoreEntitySet="Application">
+          <ScalarProperty Name="ID_application" ColumnName="ID_application" />
+          <ScalarProperty Name="number" ColumnName="number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Countries">
+        <MappingFragment StoreEntitySet="Countries">
+          <ScalarProperty Name="ID_countries" ColumnName="ID_countries" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="capital" ColumnName="capital" />
+          <ScalarProperty Name="square" ColumnName="square" />
+          <ScalarProperty Name="population" ColumnName="population" />
+          <ScalarProperty Name="continent" ColumnName="continent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries2">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Countries2">
+        <MappingFragment StoreEntitySet="Countries2">
+          <ScalarProperty Name="ID_countries2" ColumnName="ID_countries2" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="capital" ColumnName="capital" />
+          <ScalarProperty Name="part_of_the_world" ColumnName="part_of_the_world" />
+          <ScalarProperty Name="population" ColumnName="population" />
+          <ScalarProperty Name="square" ColumnName="square" />
+          <ScalarProperty Name="type_control" ColumnName="type_control" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Degree">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Degree">
+        <MappingFragment StoreEntitySet="Degree">
+          <ScalarProperty Name="ID_degree" ColumnName="ID_degree" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Department">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Department">
+        <MappingFragment StoreEntitySet="Department">
+          <ScalarProperty Name="ID_department" ColumnName="ID_department" />
+          <ScalarProperty Name="code" ColumnName="code" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ID_faculty" ColumnName="ID_faculty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Discipline">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Discipline">
+        <MappingFragment StoreEntitySet="Discipline">
+          <ScalarProperty Name="ID_discipline" ColumnName="ID_discipline" />
+          <ScalarProperty Name="volume" ColumnName="volume" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ID_department" ColumnName="ID_department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exam">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Exam">
+        <MappingFragment StoreEntitySet="Exam">
+          <ScalarProperty Name="ID_exam" ColumnName="ID_exam" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="ID_discipline" ColumnName="ID_discipline" />
+          <ScalarProperty Name="ID_student" ColumnName="ID_student" />
+          <ScalarProperty Name="ID_positions" ColumnName="ID_positions" />
+          <ScalarProperty Name="auditorium" ColumnName="auditorium" />
+          <ScalarProperty Name="score" ColumnName="score" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Faculty">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Faculty">
+        <MappingFragment StoreEntitySet="Faculty">
+          <ScalarProperty Name="ID_faculty" ColumnName="ID_faculty" />
+          <ScalarProperty Name="abbreviation" ColumnName="abbreviation" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gymnazis">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Gymnazis">
+        <MappingFragment StoreEntitySet="Gymnazis">
+          <ScalarProperty Name="ID_Gymnazis" ColumnName="ID_Gymnazis" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="school" ColumnName="school" />
+          <ScalarProperty Name="points" ColumnName="points" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Management">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Management">
+        <MappingFragment StoreEntitySet="Management">
+          <ScalarProperty Name="ID_management" ColumnName="ID_management" />
+          <ScalarProperty Name="ID_discipline" ColumnName="ID_discipline" />
+          <ScalarProperty Name="ID_speciality" ColumnName="ID_speciality" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Positions">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Positions">
+        <MappingFragment StoreEntitySet="Positions">
+          <ScalarProperty Name="ID_positions" ColumnName="ID_positions" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ID_department" ColumnName="ID_department" />
+          <ScalarProperty Name="ID_title" ColumnName="ID_title" />
+          <ScalarProperty Name="salary" ColumnName="salary" />
+          <ScalarProperty Name="shef" ColumnName="shef" />
+          <ScalarProperty Name="experience" ColumnName="experience" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Speciality">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Speciality">
+        <MappingFragment StoreEntitySet="Speciality">
+          <ScalarProperty Name="ID_spec" ColumnName="ID_spec" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="direction" ColumnName="direction" />
+          <ScalarProperty Name="ID_department" ColumnName="ID_department" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="ID_student" ColumnName="ID_student" />
+          <ScalarProperty Name="ID_speciality" ColumnName="ID_speciality" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students2">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Students2">
+        <MappingFragment StoreEntitySet="Students2">
+          <ScalarProperty Name="ID_Students2" ColumnName="ID_Students2" />
+          <ScalarProperty Name="last_name" ColumnName="last_name" />
+          <ScalarProperty Name="subject" ColumnName="subject" />
+          <ScalarProperty Name="school" ColumnName="school" />
+          <ScalarProperty Name="points" ColumnName="points" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Title">
+      <EntityTypeMapping TypeName="UchPr2_3NFModel.Title">
+        <MappingFragment StoreEntitySet="Title">
+          <ScalarProperty Name="ID_title" ColumnName="ID_title" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ID_degree" ColumnName="ID_degree" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
