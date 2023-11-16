@@ -21,7 +21,6 @@ C:\Users\212127\source\repos\WpfApp2\WpfApp2\bin\Debug\EntityFramework.SqlServer
 C:\Users\212127\source\repos\WpfApp2\WpfApp2\bin\Debug\EntityFramework.xml
 C:\Users\212127\source\repos\WpfApp2\WpfApp2\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\212127\source\repos\WpfApp2\WpfApp2\bin\Debug\ru\EntityFramework.resources.dll
-C:\Users\212127\source\repos\WpfApp2\WpfApp2\obj\Debug\App.baml
 C:\Users\212127\source\repos\WpfApp2\WpfApp2\obj\Debug\Pages\AuthorizationPage.baml
 C:\Users\212127\source\repos\WpfApp2\WpfApp2\obj\Debug\Pages\ChooseWindow.baml
 C:\Users\212127\source\repos\WpfApp2\WpfApp2\obj\Debug\WpfApp2.csproj.CopyComplete

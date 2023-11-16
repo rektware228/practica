@@ -10,14 +10,15 @@
 
     <Grid>
         <StackPanel>
-         <ListView>
+            <ListView x:Name="MyList">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="#"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding ID_student}" Width="90" Header="ID"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Speciality.direction}" Width="280" Header="Имя специальности"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding lastname}" Width="100" Header="Фамилия"></GridViewColumn>
                     </GridView>
                 </ListView.View>
-        </ListView>  
+            </ListView>
         </StackPanel>
-
     </Grid>
 </Page>
