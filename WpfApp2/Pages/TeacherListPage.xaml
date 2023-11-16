@@ -9,6 +9,17 @@
       Title="TeacherListPage">
 
     <Grid>
-        
+        <StackPanel>
+            <ListView x:Name="MyList">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding ID_positions}" Width="90" Header="ID"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding name}" Width="280" Header="Имя специальности"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Department.name}" Width="100" Header="Фамилия"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Salary}" Width="100" Header="Фамилия"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
     </Grid>
 </Page>
