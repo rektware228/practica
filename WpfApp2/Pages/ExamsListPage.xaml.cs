@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace WpfApp2.Pages
         public ExamsListPage()
         {
             InitializeComponent();
+            ExamsList.ItemsSource = App.db.Exam.ToList();
         }
     }
 }

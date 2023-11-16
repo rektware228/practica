@@ -23,6 +23,7 @@ namespace WpfApp2.Pages
         public SubjectListPage()
         {
             InitializeComponent();
+            MyList.ItemsSource = App.db.Discipline.ToList();
         }
     }
 }

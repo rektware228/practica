@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:WpfApp2"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-        <!--<Style TargetType="TextBlock">
+        <Style TargetType="TextBlock">
             <Setter Property="FontFamily" Value="TimesNewRoman"></Setter>
             <Setter Property="HorizontalAlignment" Value="Center"></Setter>
             <Setter Property="VerticalAlignment" Value="Center"></Setter>
@@ -17,9 +17,9 @@
             <Setter Property="Background" Value="Red"></Setter>
 
         </Style>
-        --><!--<Style TargetType="Grid">
+        <Style TargetType="Grid">
             <Setter Property="Background" Value="#FF3A3A3A"></Setter>
-        </Style>--><!--
+        </Style>
 
         <Style TargetType="Border" >
             <Setter Property="CornerRadius" Value="2"></Setter>
@@ -28,6 +28,6 @@
             <Setter Property="Height" Value="20"></Setter>
             <Setter Property="Width" Value="100"></Setter>
             <Setter Property="Background" Value="Black"></Setter>
-        </Style>-->
+        </Style>
     </Application.Resources>
 </Application>

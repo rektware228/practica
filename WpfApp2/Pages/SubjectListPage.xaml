@@ -9,6 +9,17 @@
       Title="SubjectListPage">
 
     <Grid>
-        
+        <StackPanel>
+            <ListView x:Name="MyList">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding ID_discipline}" Width="30" Header="ID"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding volume}" Width="100" Header="Кол-во часов"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding name}" Width="190" Header="Наимнование"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Department.name}" Width="220" Header="Кафедра"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
     </Grid>
 </Page>

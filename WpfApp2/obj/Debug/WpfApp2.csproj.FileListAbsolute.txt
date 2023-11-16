@@ -32,3 +32,4 @@ C:\Users\212127\source\repos\WpfApp2\WpfApp2\obj\Debug\Pages\ExamsListPage.baml
 C:\Users\212127\source\repos\WpfApp2\WpfApp2\obj\Debug\Pages\StudentListPage.baml
 C:\Users\212127\source\repos\WpfApp2\WpfApp2\obj\Debug\Pages\SubjectListPage.baml
 C:\Users\212127\source\repos\WpfApp2\WpfApp2\obj\Debug\Pages\TeacherListPage.baml
+C:\Users\212127\source\repos\WpfApp2\WpfApp2\obj\Debug\App.baml

@@ -13,8 +13,8 @@
             <ListView x:Name="ExamsList">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn DisplayMemberBinding="{Binding ID_exams}" Width="90" Header="ID"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding date}" Width="280" Header="Имя специальности"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding ID_exams}" Width="30" Header="ID"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding date}" Width="120" Header="Дата"></GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Discipline.name}" Width="100" Header="Дисциплина"></GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Student.lastname}" Width="100" Header="Фамилия"></GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Positions.name}" Width="100" Header="Преподаватель"></GridViewColumn>

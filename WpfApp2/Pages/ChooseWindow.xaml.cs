@@ -35,17 +35,17 @@ namespace WpfApp2.Pages
 
         private void ExamsBTN_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.NextPage(new PageComponent("Список студентов", new ExamsListPage()));
+            Navigation.NextPage(new PageComponent("Список экзаменов", new ExamsListPage()));
         }
 
         private void EmployeeBTN_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.NextPage(new PageComponent("Список студентов", new TeacherListPage()));
+            Navigation.NextPage(new PageComponent("Список сотрудников", new TeacherListPage()));
         }
 
         private void SubjectsBTN_Click(object sender, RoutedEventArgs e)
         {
-            Navigation.NextPage(new PageComponent("Список студентов", new SubjectListPage()));
+            Navigation.NextPage(new PageComponent("Список предметов", new SubjectListPage()));
         }
     }
 }
