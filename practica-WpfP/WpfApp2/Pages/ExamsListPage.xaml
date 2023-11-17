@@ -1,0 +1,40 @@
+﻿<Page x:Class="WpfApp2.Pages.ExamsListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ExamsListPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"></RowDefinition>
+            <RowDefinition Height="61*"></RowDefinition>
+            <RowDefinition Height="9*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0">
+            <TextBlock Margin="5 0">Фильтр по баллу</TextBlock>
+            <ComboBox HorizontalAlignment="Left" Margin="5 0" x:Name="SortCb">
+                <ComboBoxItem>По умолчанию</ComboBoxItem>
+            </ComboBox>
+            <TextBox x:Name="SearchTb" Width="300" Height="20"  TextChanged="SearchTb_TextChanged"></TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="1">
+            <ListView x:Name="ExamsList">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn DisplayMemberBinding="{Binding ID_exams}" Width="30" Header="ID"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding date}" Width="120" Header="Дата"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Discipline.name}" Width="100" Header="Дисциплина"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Student.lastname}" Width="100" Header="Фамилия"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Positions.name}" Width="100" Header="Преподаватель"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding auditorium}" Width="100" Header="Аудитория"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding score}" Width="100" Header="Балл"></GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+</Page>
