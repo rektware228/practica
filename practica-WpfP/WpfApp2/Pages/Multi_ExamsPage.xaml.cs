@@ -16,24 +16,14 @@ using System.Windows.Shapes;
 namespace WpfApp2.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AddEditPage.xaml
+    /// Логика взаимодействия для Multi_ExamsPage.xaml
     /// </summary>
-    public partial class AddEditPage : Page
+    public partial class Multi_ExamsPage : Page
     {
-        public AddEditPage()
+        public Multi_ExamsPage()
         {
             InitializeComponent();
-        }
-
-
-        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-
-        }
-
-        private void SaveBtn_Click(object sender, RoutedEventArgs e)
-        {
-
+            IdentityStack.ItemsSource = App.db.Exam.ToList();
         }
     }
 }

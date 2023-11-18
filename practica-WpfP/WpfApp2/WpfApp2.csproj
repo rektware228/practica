@@ -143,10 +143,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Pages\AddEditPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\AuthorizationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -156,6 +152,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\ExamsListPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Multi_ExamsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -173,9 +173,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Pages\AddEditPage.xaml.cs">
-      <DependentUpon>AddEditPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
     </Compile>
@@ -184,6 +181,9 @@
     </Compile>
     <Compile Include="Pages\ExamsListPage.xaml.cs">
       <DependentUpon>ExamsListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Multi_ExamsPage.xaml.cs">
+      <DependentUpon>Multi_ExamsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\StudentListPage.xaml.cs">
       <DependentUpon>StudentListPage.xaml</DependentUpon>
