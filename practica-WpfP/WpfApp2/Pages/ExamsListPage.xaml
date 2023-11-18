@@ -31,13 +31,13 @@
             <ListView x:Name="ExamsList">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn DisplayMemberBinding="{Binding ID_exams}" Width="30" Header="ID"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding date , StringFormat = dd.MM hh:mm}" Width="120" Header="Дата"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding Discipline.name}" Width="100" Header="Дисциплина"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding Student.lastname}" Width="100" Header="Фамилия"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding Positions.name}" Width="100" Header="Преподаватель"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding auditorium}" Width="100" Header="Аудитория"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding score}" Width="100" Header="Балл"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding ID_exam}" Width="auto" Header="ID"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding date , StringFormat = dd.MM hh:mm}" Width="auto" Header="Дата"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Discipline.name}" Width="auto" Header="Дисциплина"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Student.lastname}" Width="auto" Header="Фамилия"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Positions.name}" Width="auto" Header="Преподаватель"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding auditorium}" Width="auto" Header="Аудитория"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding score}" Width="auto" Header="Балл"></GridViewColumn>
                     </GridView>
                 </ListView.View>
             </ListView>

@@ -27,9 +27,9 @@
             <ListView x:Name="MyList">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn DisplayMemberBinding="{Binding ID_student}" Width="90" Header="ID"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding Speciality.direction}" Width="280" Header="Имя специальности"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding lastname}" Width="100" Header="Фамилия"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding ID_student}" Width="auto" Header="ID"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Speciality.direction}" Width="auto" Header="Имя специальности"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding lastname}" Width="auto" Header="Фамилия"></GridViewColumn>
                     </GridView>
                 </ListView.View>
             </ListView>

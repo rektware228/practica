@@ -30,13 +30,13 @@
             <ListView x:Name="PositionsList">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn DisplayMemberBinding="{Binding ID_positions}" Width="90" Header="ID"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding name}" Width="180" Header="Фамлия И.О"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding Department.name}" Width="100" Header="Кафедра"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding Title.name}" Width="100" Header="Профессия"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding salary}" Width="100" Header="Зарплата"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding shef}" Width="100" Header="Шеф"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding experience}" Width="100" Header="Стаж"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding ID_positions}" Width="auto" Header="ID"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding name}" Width="auto" Header="Фамлия И.О"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Department.name}" Width="auto" Header="Кафедра"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding Title.name}" Width="auto" Header="Профессия"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding salary}" Width="auto" Header="Зарплата"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding shef}" Width="auto" Header="Шеф"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding experience}" Width="auto" Header="Стаж"></GridViewColumn>
                     </GridView>
                 </ListView.View>
             </ListView>
