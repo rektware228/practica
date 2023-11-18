@@ -41,5 +41,10 @@
                 <TextBlock x:Name="CountDataTb"></TextBlock>
             </StackPanel>
         </StackPanel>
+        <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button x:Name="AddBTN">Добавить</Button>
+            <Button x:Name="EditBTN">Редактирование</Button>
+            <Button x:Name="DeleteBTN">Удаление</Button>
+        </StackPanel>
     </Grid>
 </Page>
