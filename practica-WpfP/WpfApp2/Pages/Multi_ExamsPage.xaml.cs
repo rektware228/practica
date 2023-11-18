@@ -23,7 +23,17 @@ namespace WpfApp2.Pages
         public Multi_ExamsPage()
         {
             InitializeComponent();
-            IdentityStack.ItemsSource = App.db.Exam.ToList();
+            //IdentityStack.ItemsSource = App.db.Exam.ToList();
+        }
+
+        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+
+        }
+
+        private void SaveBtn_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
