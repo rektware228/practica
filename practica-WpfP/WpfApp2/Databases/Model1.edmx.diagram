@@ -4,35 +4,36 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="b9cf5791bc614ad0af7546fe43fda3d2" Name="Diagram1">
-        <EntityTypeShape EntityType="NFDBModel.Academics" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Application" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Countries" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Countries2" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Degree" Width="1.5" PointX="3.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Department" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Discipline" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Exam" Width="1.5" PointX="9.75" PointY="8" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Faculty" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Gymnazis" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Management" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Positions" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Speciality" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Student" Width="1.5" PointX="7.5" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Students2" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="NFDBModel.Title" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
-        <AssociationConnector Association="NFDBModel.FK_Title_Degree" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Department_Faculty" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Discipline_Department" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Positions_Department" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Speciality_Department1" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Exam_Discipline" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Management_Discipline" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Exam_Positions" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Exam_Student1" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Management_Speciality" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Positions_Title" ManuallyRouted="false" />
-        <AssociationConnector Association="NFDBModel.FK_Student_Speciality1" ManuallyRouted="false" />
+      <Diagram DiagramId="94054b3037b447e98665c3619086e281" Name="Diagram1">
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Academics" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Application" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Countries" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Countries2" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Degree" Width="1.5" PointX="3.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Department" Width="1.5" PointX="3" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Discipline" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Exam" Width="1.5" PointX="9.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Faculty" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Gymnazis" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Management" Width="1.5" PointX="7.5" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Positions" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Speciality" Width="1.5" PointX="5.25" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Student" Width="1.5" PointX="7.5" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Students2" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.sysdiagrams" Width="1.5" PointX="11.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="UchPr2_3NFModel.Title" Width="1.5" PointX="6" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Title_Degree" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Department_Faculty" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Discipline_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Positions_Department" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Speciality_Department1" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Exam_Discipline" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Management_Discipline" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Exam_Positions" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Exam_Student1" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Management_Speciality" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Positions_Title" ManuallyRouted="false" />
+        <AssociationConnector Association="UchPr2_3NFModel.FK_Student_Speciality1" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

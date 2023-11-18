@@ -13,10 +13,10 @@ namespace WpfApp2.Databases
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class NFDBEntities : DbContext
+    public partial class UchPr2_3NFEntities1 : DbContext
     {
-        public NFDBEntities()
-            : base("name=NFDBEntities")
+        public UchPr2_3NFEntities1()
+            : base("name=UchPr2_3NFEntities1")
         {
         }
     
@@ -40,6 +40,7 @@ namespace WpfApp2.Databases
         public virtual DbSet<Speciality> Speciality { get; set; }
         public virtual DbSet<Student> Student { get; set; }
         public virtual DbSet<Students2> Students2 { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Title> Title { get; set; }
     }
 }

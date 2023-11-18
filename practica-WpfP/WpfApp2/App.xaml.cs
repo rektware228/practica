@@ -14,7 +14,7 @@ namespace WpfApp2
     /// </summary>
     public partial class App : System.Windows.Application
     {
-        public static NFDBEntities db = new NFDBEntities();
+        public static UchPr2_3NFEntities1 db = new UchPr2_3NFEntities1();
         public static bool IsStudent = false; //вход студента
         //public static bool IsTeacher = false; //вход учителя
         //public static bool IsHeadDepartment = false; //вход зава кафедры

@@ -15,12 +15,15 @@
             <RowDefinition Height="9*"></RowDefinition>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0">
-            <TextBlock Margin="5 0">Фильтр по фамилии</TextBlock>
-            <ComboBox HorizontalAlignment="Left" Margin="5 0" x:Name="SortCb">
+            <TextBlock Margin="5 0">Фильтр по часам</TextBlock>
+            <ComboBox HorizontalAlignment="Left" Margin="5 0" x:Name="SortCb" SelectionChanged="SortCb_SelectionChanged">
                 <ComboBoxItem>По умолчанию</ComboBoxItem>
-                <ComboBoxItem>От А до Я</ComboBoxItem>
-                <ComboBoxItem>От Я до А</ComboBoxItem>
+                <ComboBoxItem>От 0 до 80</ComboBoxItem>
+                <ComboBoxItem>От 80 до 160</ComboBoxItem>
+                <ComboBoxItem>От 160 до 320</ComboBoxItem>
+                <ComboBoxItem>От 320 до 640</ComboBoxItem>
             </ComboBox>
+            <TextBlock Margin="5 0">Поиск по наименованию</TextBlock>
             <TextBox x:Name="SearchTb" Width="300" Height="20"  TextChanged="SearchTb_TextChanged"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="1">

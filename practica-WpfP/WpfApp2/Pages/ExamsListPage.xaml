@@ -16,9 +16,15 @@
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="0">
             <TextBlock Margin="5 0">Фильтр по баллу</TextBlock>
-            <ComboBox HorizontalAlignment="Left" Margin="5 0" x:Name="SortCb">
+            <ComboBox HorizontalAlignment="Left" Margin="5 0" x:Name="SortCb" SelectionChanged="SortCb_SelectionChanged">
                 <ComboBoxItem>По умолчанию</ComboBoxItem>
+                <ComboBoxItem>1</ComboBoxItem>
+                <ComboBoxItem>2</ComboBoxItem>
+                <ComboBoxItem>3</ComboBoxItem>
+                <ComboBoxItem>4</ComboBoxItem>
+                <ComboBoxItem>5</ComboBoxItem>
             </ComboBox>
+            <TextBlock Margin="5 0">Фильтр по аудитории</TextBlock>
             <TextBox x:Name="SearchTb" Width="300" Height="20"  TextChanged="SearchTb_TextChanged"></TextBox>
         </StackPanel>
         <StackPanel Grid.Row="1">
@@ -26,7 +32,7 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn DisplayMemberBinding="{Binding ID_exams}" Width="30" Header="ID"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding date}" Width="120" Header="Дата"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding date , StringFormat = dd.MM hh:mm}" Width="120" Header="Дата"></GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Discipline.name}" Width="100" Header="Дисциплина"></GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Student.lastname}" Width="100" Header="Фамилия"></GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Positions.name}" Width="100" Header="Преподаватель"></GridViewColumn>

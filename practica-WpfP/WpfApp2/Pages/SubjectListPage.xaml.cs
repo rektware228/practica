@@ -27,7 +27,7 @@ namespace WpfApp2.Pages
         {
             InitializeComponent();
             MyList.ItemsSource = App.db.Discipline.ToList();
-            //MyList.ItemsSource = App.db.Student.ToList();
+            Refresh();
 
         }
 
@@ -35,15 +35,33 @@ namespace WpfApp2.Pages
         {
             Refresh();
         }
+
+        private void SortCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Refresh();
+        }
         private void Refresh()
         {
             IEnumerable<Discipline> disSortList = App.db.Discipline.ToList();
-            if(SearchTb.Text != null)
+            if (SortCb.SelectedIndex != 0)
+            {
+                if (SortCb.SelectedIndex == 1)
+                    disSortList = disSortList.Where(x => x.volume >= 0 && x.volume < 80);
+                else if (SortCb.SelectedIndex == 2)               
+                    disSortList = disSortList.Where(x => x.volume >= 80 && x.volume < 160);
+                else if (SortCb.SelectedIndex == 3)               
+                    disSortList = disSortList.Where(x => x.volume >= 160 && x.volume < 320);
+                else if (SortCb.SelectedIndex == 4)               
+                    disSortList = disSortList.Where(x => x.volume >= 320 && x.volume <= 640);
+            }
+            MyList.ItemsSource = disSortList.ToList();
+            if (SearchTb.Text != null)
             {
                 disSortList = disSortList.Where(x => x.name.ToLower().Contains(SearchTb.Text.ToLower()) || x.name.ToLower().Contains(SearchTb.Text.ToLower()));
                 MyList.ItemsSource = disSortList;
             }
             CountDataTb.Text = disSortList.Count() + "" + App.db.Student.ToList().Count;
         }
+
     }
 }
