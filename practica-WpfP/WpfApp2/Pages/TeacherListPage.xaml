@@ -42,9 +42,7 @@
             </ListView>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="AddBTN">Добавить</Button>
-            <Button x:Name="EditBTN">Редактирование</Button>
-            <Button x:Name="DeleteBTN">Удаление</Button>
+            <Button x:Name="MultiBTN">Изменение таблицы</Button>
         </StackPanel>
     </Grid>
 </Page>
