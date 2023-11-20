@@ -1,47 +1,48 @@
-﻿<Page x:Class="WpfApp2.Pages.Multi_ExamsPage"
+﻿<Page x:Class="WpfApp2.Pages.Multi_TeacherPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp2.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="auto0"
-      Title="Multi_ExamsPage">
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Multi_TeacherPage">
 
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Width="320" Height="450" Margin="0 0 0 0">
-                
+
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5" x:Name="IdentityStack">
                     <TextBlock><Run Text="Идентификатор "/></TextBlock>
-                    <TextBox IsReadOnly="True" Text="{Binding ID_exam}" x:Name="IdTb" Width="auto"></TextBox>
+                    <TextBox IsReadOnly="True" Text="{Binding ID_positions}" x:Name="IdTb" Width="auto"></TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock ><Run Text="Дата "/></TextBlock>
-                    <TextBox Text="{Binding date , StringFormat = dd.MM}" x:Name="DateTb" Width="auto"/>
+                    <TextBlock ><Run Text="Имя "/></TextBlock>
+                    <TextBox Text="{Binding name}" x:Name="NameTb" Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock ><Run Text="Дисциплина "/></TextBlock>
-                    <TextBox Text="{Binding Discipline.name}" x:Name="DisciplineTb" Width="auto"/>
+                    <TextBlock ><Run Text="Кафедра "/></TextBlock>
+                    <TextBox Text="{Binding Department.name}" x:Name="DepartmentTb" Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock><Run Text="Студент "/></TextBlock>
-                    <TextBox Text="{Binding Student.lastname}" x:Name="StudentTb"  Width="auto"/>
+                    <TextBlock ><Run Text="Специальность "/></TextBlock>
+                    <TextBox Text="{Binding Title.name}" x:Name="SpecialityTb" Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock ><Run Text="Сотрудник "/></TextBlock>
-                    <TextBox Text="{Binding Positions.name}" x:Name="PositionTb" Width="auto"/>
+                    <TextBlock ><Run Text="Зарплата "/></TextBlock>
+                    <TextBox Text="{Binding salary}" x:Name="SalaryTb" Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock><Run Text="Аудитория "/></TextBlock>
-                    <TextBox Text="{Binding auditorium}" x:Name="AuditoriumTb"  Width="auto"/>
+                    <TextBlock ><Run Text="Шеф "/></TextBlock>
+                    <TextBox Text="{Binding name}" x:Name="ShefTb" Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock><Run Text="Оценка "/></TextBlock>
-                    <TextBox Text="{Binding score}" x:Name="ScoreTb" Width="auto"/>
+                    <TextBlock ><Run Text="Стаж "/></TextBlock>
+                    <TextBox Text="{Binding experience}" x:Name="ExpTb" Width="auto"/>
                 </StackPanel>
+
                 <Button  x:Name="SaveBtn"   Margin="0 0 0 10" Click="SaveBtn_Click" Content="Сохранить"/>
-                <Button  x:Name="DeleteBtn" Content="Удалить"/>
+                <Button  x:Name="DeleteBtn" Content="Удалить" Click="DeleteBtn_Click"/>
             </StackPanel>
         </StackPanel>
     </Grid>

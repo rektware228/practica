@@ -159,6 +159,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Multi_StudentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Multi_SubjectPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Multi_TeacherPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\StudentListPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,6 +196,15 @@
     </Compile>
     <Compile Include="Pages\Multi_ExamsPage.xaml.cs">
       <DependentUpon>Multi_ExamsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Multi_StudentPage.xaml.cs">
+      <DependentUpon>Multi_StudentPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Multi_SubjectPage.xaml.cs">
+      <DependentUpon>Multi_SubjectPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Multi_TeacherPage.xaml.cs">
+      <DependentUpon>Multi_TeacherPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\StudentListPage.xaml.cs">
       <DependentUpon>StudentListPage.xaml</DependentUpon>

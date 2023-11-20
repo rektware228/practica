@@ -22,6 +22,8 @@ namespace WpfApp2.Pages
     public partial class Multi_ExamsPage : Page
     {
         private Exam exam;
+
+
         public Multi_ExamsPage(Exam _exam)
         {
             InitializeComponent();
@@ -36,14 +38,14 @@ namespace WpfApp2.Pages
             ScoreTb.DataContext = exam;
         }
 
-        private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
-        {
-
-        }
-
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            StringBuilder error = new StringBuilder();
+            if (exam.ID_positions == 0)
+            {
+                Exam newExam = App.db.Exam.Add(exam);
+                
+            }
         }
 
         private void ExamCb_SelectionChanged(object sender, SelectionChangedEventArgs e)

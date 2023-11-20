@@ -42,7 +42,7 @@
             </StackPanel>
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button x:Name="MultiBTN">Изменение таблицы</Button>
+            <Button x:Name="MultiBTN" Click="MultiBTN_Click">Изменение таблицы</Button>
         </StackPanel>
     </Grid>
 </Page>

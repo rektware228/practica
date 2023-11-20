@@ -1,0 +1,37 @@
+﻿<Page x:Class="WpfApp2.Pages.Multi_SubjectPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp2.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Multi_SubjectPage">
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Width="320" Height="450" Margin="0 0 0 0">
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5" x:Name="IdentityStack">
+                    <TextBlock><Run Text="Идентификатор "/></TextBlock>
+                    <TextBox IsReadOnly="True" Text="{Binding ID_discipline}" x:Name="IdTb" Width="auto"></TextBox>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+                    <TextBlock ><Run Text="Специальность "/></TextBlock>
+                    <TextBox Text="{Binding volume}" x:Name="VolumeTb" Width="auto"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+                    <TextBlock ><Run Text="Фаилия И. О. "/></TextBlock>
+                    <TextBox Text="{Binding name}" x:Name="LastnameTb" Width="auto"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+                    <TextBlock ><Run Text="Кафедра "/></TextBlock>
+                    <TextBox Text="{Binding Department.name}" x:Name="DepartmentTb" Width="auto"/>
+                </StackPanel>
+
+                <Button  x:Name="SaveBtn"   Margin="0 0 0 10" Click="SaveBtn_Click" Content="Сохранить"/>
+                <Button  x:Name="DeleteBtn" Content="Удалить" Click="DeleteBtn_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>
