@@ -5,38 +5,43 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WpfApp2.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="auto0"
       Title="Multi_ExamsPage">
 
     <Grid>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Width="320" Height="450" Margin="0 0 0 0">
+                
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5" x:Name="IdentityStack">
-                    <TextBlock x:Name="IdTb"><Run Text="Идентификатор"/></TextBlock>
-                    <TextBox Text="{Binding ID_exam}" IsReadOnly="True" PreviewTextInput="TextBox_PreviewTextInput"/>
+                    <TextBlock><Run Text="Идентификатор "/></TextBlock>
+                    <TextBox IsReadOnly="True" Text="{Binding ID_exam}" x:Name="IdTb" Width="auto"></TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock x:Name="TitleTb" ><Run Text="Название"/></TextBlock>
-                    <TextBox Text="{Binding Title}"/>
+                    <TextBlock ><Run Text="Дата "/></TextBlock>
+                    <TextBox Text="{Binding date , StringFormat = dd.MM}" x:Name="DateTb" Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock x:Name="CostTb"  ><Run Text="Стоимость"/></TextBlock>
-                    <TextBox Text="{Binding Cost}"/>
+                    <TextBlock ><Run Text="Дисциплина "/></TextBlock>
+                    <TextBox Text="{Binding Discipline.name}" x:Name="DisciplineTb" Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock x:Name="TimeTb" ><Run Text="Длительность"/></TextBlock>
-                    <TextBox Text="{Binding DurationInSeconds}"/>
+                    <TextBlock><Run Text="Студент "/></TextBlock>
+                    <TextBox Text="{Binding Student.lastname}" x:Name="StudentTb"  Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock x:Name="DescriptionTb" ><Run Text="Описание"/></TextBlock>
-                    <TextBox Height="150"/>
+                    <TextBlock ><Run Text="Сотрудник "/></TextBlock>
+                    <TextBox Text="{Binding Positions.name}" x:Name="PositionTb" Width="auto"/>
                 </StackPanel>
-
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock x:Name="DiscountTb"><Run Text="Скидка"/></TextBlock>
-                    <TextBox  Text="{Binding Discount}"/>
+                    <TextBlock><Run Text="Аудитория "/></TextBlock>
+                    <TextBox Text="{Binding auditorium}" x:Name="AuditoriumTb"  Width="auto"/>
                 </StackPanel>
-                <Button  x:Name="SaveBtn" Click="SaveBtn_Click" Content="Сохранить"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+                    <TextBlock><Run Text="Оценка "/></TextBlock>
+                    <TextBox Text="{Binding score}" x:Name="ScoreTb" Width="auto"/>
+                </StackPanel>
+                <Button  x:Name="SaveBtn"   Margin="0 0 0 10" Click="SaveBtn_Click" Content="Сохранить"/>
+                <Button  x:Name="DeleteBtn"  Click="SaveBtn_Click" Content="Удалить"/>
             </StackPanel>
         </StackPanel>
     </Grid>

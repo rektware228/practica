@@ -65,7 +65,7 @@
           <Key>
             <PropertyRef Name="ID_discipline" />
           </Key>
-          <Property Name="ID_discipline" Type="int" Nullable="false" />
+          <Property Name="ID_discipline" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="volume" Type="int" />
           <Property Name="name" Type="nvarchar" MaxLength="50" />
           <Property Name="ID_department" Type="int" />
@@ -74,7 +74,7 @@
           <Key>
             <PropertyRef Name="ID_exam" />
           </Key>
-          <Property Name="ID_exam" Type="int" Nullable="false" />
+          <Property Name="ID_exam" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="date" Type="date" />
           <Property Name="ID_discipline" Type="int" />
           <Property Name="ID_student" Type="int" />
@@ -112,7 +112,7 @@
           <Key>
             <PropertyRef Name="ID_positions" />
           </Key>
-          <Property Name="ID_positions" Type="int" Nullable="false" />
+          <Property Name="ID_positions" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="100" />
           <Property Name="ID_department" Type="int" />
           <Property Name="ID_title" Type="int" />
@@ -133,7 +133,7 @@
           <Key>
             <PropertyRef Name="ID_student" />
           </Key>
-          <Property Name="ID_student" Type="int" Nullable="false" />
+          <Property Name="ID_student" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_speciality" Type="int" />
           <Property Name="lastname" Type="nvarchar" MaxLength="50" />
         </EntityType>
@@ -161,7 +161,7 @@
           <Key>
             <PropertyRef Name="ID_title" />
           </Key>
-          <Property Name="ID_title" Type="int" Nullable="false" />
+          <Property Name="ID_title" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" />
           <Property Name="ID_degree" Type="int" />
         </EntityType>
@@ -446,7 +446,7 @@
           <Key>
             <PropertyRef Name="ID_discipline" />
           </Key>
-          <Property Name="ID_discipline" Type="Int32" Nullable="false" />
+          <Property Name="ID_discipline" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="volume" Type="Int32" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ID_department" Type="Int32" />
@@ -458,7 +458,7 @@
           <Key>
             <PropertyRef Name="ID_exam" />
           </Key>
-          <Property Name="ID_exam" Type="Int32" Nullable="false" />
+          <Property Name="ID_exam" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="date" Type="DateTime" Precision="0" />
           <Property Name="ID_discipline" Type="Int32" />
           <Property Name="ID_student" Type="Int32" />
@@ -502,7 +502,7 @@
           <Key>
             <PropertyRef Name="ID_positions" />
           </Key>
-          <Property Name="ID_positions" Type="Int32" Nullable="false" />
+          <Property Name="ID_positions" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ID_department" Type="Int32" />
           <Property Name="ID_title" Type="Int32" />
@@ -529,7 +529,7 @@
           <Key>
             <PropertyRef Name="ID_student" />
           </Key>
-          <Property Name="ID_student" Type="Int32" Nullable="false" />
+          <Property Name="ID_student" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_speciality" Type="Int32" />
           <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Exam" Relationship="Self.FK_Exam_Student1" FromRole="Student" ToRole="Exam" />
@@ -559,7 +559,7 @@
           <Key>
             <PropertyRef Name="ID_title" />
           </Key>
-          <Property Name="ID_title" Type="Int32" Nullable="false" />
+          <Property Name="ID_title" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ID_degree" Type="Int32" />
           <NavigationProperty Name="Degree" Relationship="Self.FK_Title_Degree" FromRole="Title" ToRole="Degree" />
@@ -709,7 +709,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="UchPr2_3NFEntities1" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="UchPr2_3NFEntities3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Academics" EntityType="Self.Academics" />
           <EntitySet Name="Application" EntityType="Self.Application" />
           <EntitySet Name="Countries" EntityType="Self.Countries" />
@@ -781,7 +781,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище UchPr2_3NFModelContainer" CdmEntityContainer="UchPr2_3NFEntities1">
+        <EntityContainerMapping StorageEntityContainer="Хранилище UchPr2_3NFModelContainer" CdmEntityContainer="UchPr2_3NFEntities3">
           <EntitySetMapping Name="Academics">
             <EntityTypeMapping TypeName="UchPr2_3NFModel.Academics">
               <MappingFragment StoreEntitySet="Academics">

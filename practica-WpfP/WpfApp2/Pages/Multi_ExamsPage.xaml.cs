@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp2.Databases;
 
 namespace WpfApp2.Pages
 {
@@ -20,10 +21,19 @@ namespace WpfApp2.Pages
     /// </summary>
     public partial class Multi_ExamsPage : Page
     {
-        public Multi_ExamsPage()
+        private Exam exam;
+        public Multi_ExamsPage(Exam _exam)
         {
             InitializeComponent();
-            //IdentityStack.ItemsSource = App.db.Exam.ToList();
+            exam = _exam;
+            this.DataContext = exam;
+            IdTb.DataContext = exam;
+            DateTb.DataContext = exam;
+            DisciplineTb.DataContext = exam;
+            StudentTb.DataContext = exam;
+            PositionTb.DataContext = exam;
+            AuditoriumTb.DataContext = exam;
+            ScoreTb.DataContext = exam;
         }
 
         private void TextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -34,6 +44,14 @@ namespace WpfApp2.Pages
         private void SaveBtn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ExamCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //if(ExamCb.SelectedIndex != null) 
+            //{ 
+
+            //}
         }
     }
 }

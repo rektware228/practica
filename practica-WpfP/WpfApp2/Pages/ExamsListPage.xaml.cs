@@ -13,7 +13,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp2.Components;
 using WpfApp2.Databases;
+using static WpfApp2.Components.Navigation;
 
 namespace WpfApp2.Pages
 {
@@ -64,6 +66,21 @@ namespace WpfApp2.Pages
             }
         }
 
+        private void MultiBTN_Click(object sender, RoutedEventArgs e)
+        {
+            Exam exam = ExamsList.SelectedItem as Exam;
+            if(exam != null)
+           Navigation.NextPage(new PageComponent("Изменения", new Multi_ExamsPage(exam)));
+            else if (exam == null)
+            {
+                Navigation.NextPage(new PageComponent("Изменения", new Multi_ExamsPage(exam)));
+            }
 
+        }
+
+        private void ExamsList_Selected(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }

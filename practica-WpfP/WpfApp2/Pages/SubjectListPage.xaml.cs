@@ -60,7 +60,7 @@ namespace WpfApp2.Pages
                 disSortList = disSortList.Where(x => x.name.ToLower().Contains(SearchTb.Text.ToLower()) || x.name.ToLower().Contains(SearchTb.Text.ToLower()));
                 MyList.ItemsSource = disSortList;
             }
-            CountDataTb.Text = disSortList.Count() + "" + App.db.Student.ToList().Count;
+           
         }
 
     }
