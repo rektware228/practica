@@ -21,6 +21,7 @@ namespace WpfApp2.Databases
         public Nullable<int> ID_positions { get; set; }
         public string auditorium { get; set; }
         public Nullable<int> score { get; set; }
+        public Nullable<bool> IsDeleted { get; set; }
     
         public virtual Discipline Discipline { get; set; }
         public virtual Positions Positions { get; set; }

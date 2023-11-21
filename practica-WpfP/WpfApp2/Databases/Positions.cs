@@ -27,6 +27,7 @@ namespace WpfApp2.Databases
         public Nullable<decimal> salary { get; set; }
         public Nullable<int> shef { get; set; }
         public Nullable<int> experience { get; set; }
+        public Nullable<bool> IsDeleted { get; set; }
     
         public virtual Department Department { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

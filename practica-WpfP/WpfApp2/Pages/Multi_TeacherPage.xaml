@@ -14,28 +14,36 @@
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5" x:Name="IdentityStack">
                     <TextBlock><Run Text="Идентификатор "/></TextBlock>
-                    <TextBox IsReadOnly="True" Text="{Binding ID_positions}" x:Name="IdTb" Width="auto"></TextBox>
+                    <TextBox  Text="{Binding ID_positions}" x:Name="IdTb" Width="auto"></TextBox>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                     <TextBlock ><Run Text="Имя "/></TextBlock>
                     <TextBox Text="{Binding name}" x:Name="NameTb" Width="auto"/>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                     <TextBlock ><Run Text="Кафедра "/></TextBlock>
-                    <TextBox Text="{Binding Department.name}" x:Name="DepartmentTb" Width="auto"/>
+                    <ComboBox IsEditable="True" Text="{Binding Department.name}"
+                              x:Name="DepartmentCb" Width="auto"/>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                     <TextBlock ><Run Text="Специальность "/></TextBlock>
-                    <TextBox Text="{Binding Title.name}" x:Name="SpecialityTb" Width="auto"/>
+                    <ComboBox IsEditable="True" Text="{Binding Title.name}"
+                              x:Name="SpecialityCb" Width="auto"/>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                     <TextBlock ><Run Text="Зарплата "/></TextBlock>
                     <TextBox Text="{Binding salary}" x:Name="SalaryTb" Width="auto"/>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                     <TextBlock ><Run Text="Шеф "/></TextBlock>
-                    <TextBox Text="{Binding name}" x:Name="ShefTb" Width="auto"/>
+                    <ComboBox IsEditable="True" Text="{Binding name}" x:Name="ShefCb" Width="auto"/>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                     <TextBlock ><Run Text="Стаж "/></TextBlock>
                     <TextBox Text="{Binding experience}" x:Name="ExpTb" Width="auto"/>

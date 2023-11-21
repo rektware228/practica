@@ -23,6 +23,7 @@ namespace WpfApp2.Databases
         public int ID_student { get; set; }
         public Nullable<int> ID_speciality { get; set; }
         public string lastname { get; set; }
+        public Nullable<bool> IsDeleted { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Exam> Exam { get; set; }

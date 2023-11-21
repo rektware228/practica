@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище UchPr2_3NFModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Хранилище UchPr2_3NFModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Academics">
           <Key>
             <PropertyRef Name="ID_academics" />
@@ -69,6 +69,7 @@
           <Property Name="volume" Type="int" />
           <Property Name="name" Type="nvarchar" MaxLength="50" />
           <Property Name="ID_department" Type="int" />
+          <Property Name="IsDeleted" Type="bit" />
         </EntityType>
         <EntityType Name="Exam">
           <Key>
@@ -81,6 +82,7 @@
           <Property Name="ID_positions" Type="int" />
           <Property Name="auditorium" Type="nvarchar" MaxLength="50" />
           <Property Name="score" Type="int" />
+          <Property Name="IsDeleted" Type="bit" />
         </EntityType>
         <EntityType Name="Faculty">
           <Key>
@@ -119,6 +121,7 @@
           <Property Name="salary" Type="decimal" Precision="10" Scale="2" />
           <Property Name="shef" Type="int" />
           <Property Name="experience" Type="int" />
+          <Property Name="IsDeleted" Type="bit" />
         </EntityType>
         <EntityType Name="Speciality">
           <Key>
@@ -136,6 +139,7 @@
           <Property Name="ID_student" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_speciality" Type="int" />
           <Property Name="lastname" Type="nvarchar" MaxLength="50" />
+          <Property Name="IsDeleted" Type="bit" />
         </EntityType>
         <EntityType Name="Students2">
           <Key>
@@ -376,8 +380,7 @@
             <End Role="Title" EntitySet="Title" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="UchPr2_3NFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -450,6 +453,7 @@
           <Property Name="volume" Type="Int32" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="ID_department" Type="Int32" />
+          <Property Name="IsDeleted" Type="Boolean" />
           <NavigationProperty Name="Department" Relationship="Self.FK_Discipline_Department" FromRole="Discipline" ToRole="Department" />
           <NavigationProperty Name="Exam" Relationship="Self.FK_Exam_Discipline" FromRole="Discipline" ToRole="Exam" />
           <NavigationProperty Name="Management" Relationship="Self.FK_Management_Discipline" FromRole="Discipline" ToRole="Management" />
@@ -465,6 +469,7 @@
           <Property Name="ID_positions" Type="Int32" />
           <Property Name="auditorium" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="score" Type="Int32" />
+          <Property Name="IsDeleted" Type="Boolean" />
           <NavigationProperty Name="Discipline" Relationship="Self.FK_Exam_Discipline" FromRole="Exam" ToRole="Discipline" />
           <NavigationProperty Name="Positions" Relationship="Self.FK_Exam_Positions" FromRole="Exam" ToRole="Positions" />
           <NavigationProperty Name="Student" Relationship="Self.FK_Exam_Student1" FromRole="Exam" ToRole="Student" />
@@ -509,6 +514,7 @@
           <Property Name="salary" Type="Decimal" Precision="10" Scale="2" />
           <Property Name="shef" Type="Int32" />
           <Property Name="experience" Type="Int32" />
+          <Property Name="IsDeleted" Type="Boolean" />
           <NavigationProperty Name="Department" Relationship="Self.FK_Positions_Department" FromRole="Positions" ToRole="Department" />
           <NavigationProperty Name="Exam" Relationship="Self.FK_Exam_Positions" FromRole="Positions" ToRole="Exam" />
           <NavigationProperty Name="Title" Relationship="Self.FK_Positions_Title" FromRole="Positions" ToRole="Title" />
@@ -532,6 +538,7 @@
           <Property Name="ID_student" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_speciality" Type="Int32" />
           <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IsDeleted" Type="Boolean" />
           <NavigationProperty Name="Exam" Relationship="Self.FK_Exam_Student1" FromRole="Student" ToRole="Exam" />
           <NavigationProperty Name="Speciality" Relationship="Self.FK_Student_Speciality1" FromRole="Student" ToRole="Speciality" />
         </EntityType>
@@ -709,7 +716,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="UchPr2_3NFEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="UchPr2_3NFEntities5" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Academics" EntityType="Self.Academics" />
           <EntitySet Name="Application" EntityType="Self.Application" />
           <EntitySet Name="Countries" EntityType="Self.Countries" />
@@ -781,7 +788,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище UchPr2_3NFModelContainer" CdmEntityContainer="UchPr2_3NFEntities3">
+        <EntityContainerMapping StorageEntityContainer="Хранилище UchPr2_3NFModelContainer" CdmEntityContainer="UchPr2_3NFEntities5">
           <EntitySetMapping Name="Academics">
             <EntityTypeMapping TypeName="UchPr2_3NFModel.Academics">
               <MappingFragment StoreEntitySet="Academics">
@@ -851,6 +858,7 @@
                 <ScalarProperty Name="volume" ColumnName="volume" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="ID_department" ColumnName="ID_department" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -864,6 +872,7 @@
                 <ScalarProperty Name="ID_positions" ColumnName="ID_positions" />
                 <ScalarProperty Name="auditorium" ColumnName="auditorium" />
                 <ScalarProperty Name="score" ColumnName="score" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -906,6 +915,7 @@
                 <ScalarProperty Name="salary" ColumnName="salary" />
                 <ScalarProperty Name="shef" ColumnName="shef" />
                 <ScalarProperty Name="experience" ColumnName="experience" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -925,6 +935,7 @@
                 <ScalarProperty Name="ID_student" ColumnName="ID_student" />
                 <ScalarProperty Name="ID_speciality" ColumnName="ID_speciality" />
                 <ScalarProperty Name="lastname" ColumnName="lastname" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

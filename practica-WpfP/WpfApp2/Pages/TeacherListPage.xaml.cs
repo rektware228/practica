@@ -67,12 +67,11 @@ namespace WpfApp2.Pages
         private void MultiBTN_Click(object sender, RoutedEventArgs e)
         {
             Positions positions = PositionsList.SelectedItem as Positions;
-            if (positions != null)
-                Navigation.NextPage(new PageComponent("Изменения", new Multi_TeacherPage(positions)));
-            else if (positions == null)
-            {
-                Navigation.NextPage(new PageComponent("Изменения", new Multi_TeacherPage(positions)));
-            }
+            if (PositionsList.SelectedItem != null)
+                Navigation.NextPage(new PageComponent("Изменение", new Multi_TeacherPage(positions)));
+            else 
+                Navigation.NextPage(new PageComponent("Добавление", new Multi_TeacherPage(new Positions())));
+            
         }
     }
 }

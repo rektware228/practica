@@ -32,7 +32,7 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn DisplayMemberBinding="{Binding ID_exam}" Width="auto" Header="ID"></GridViewColumn>
-                        <GridViewColumn DisplayMemberBinding="{Binding date , StringFormat = dd.MM}" Width="auto" Header="Дата"></GridViewColumn>
+                        <GridViewColumn DisplayMemberBinding="{Binding date , StringFormat = dd.MM.yyyy}" Width="auto" Header="Дата"></GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Discipline.name}" Width="auto" Header="Дисциплина"></GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Student.lastname}" Width="auto" Header="Фамилия"></GridViewColumn>
                         <GridViewColumn DisplayMemberBinding="{Binding Positions.name}" Width="auto" Header="Преподаватель"></GridViewColumn>

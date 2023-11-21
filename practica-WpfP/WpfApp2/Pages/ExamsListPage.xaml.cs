@@ -69,12 +69,15 @@ namespace WpfApp2.Pages
         private void MultiBTN_Click(object sender, RoutedEventArgs e)
         {
             Exam exam = ExamsList.SelectedItem as Exam;
-            if(exam != null)
-           Navigation.NextPage(new PageComponent("Изменения", new Multi_ExamsPage(exam)));
-            else if (exam == null)
-            {
+            if (ExamsList.SelectedItem != null)
                 Navigation.NextPage(new PageComponent("Изменения", new Multi_ExamsPage(exam)));
-            }
+            else
+
+                Navigation.NextPage(new PageComponent("Добавление", new Multi_ExamsPage(new Exam())));
+            //else if (exam == null)
+            //{
+            //    NavigationService.Navigate(new Multi_ExamsPage());
+            //}
 
         }
 

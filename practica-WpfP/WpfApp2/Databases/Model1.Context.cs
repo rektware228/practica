@@ -13,10 +13,10 @@ namespace WpfApp2.Databases
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class UchPr2_3NFEntities3 : DbContext
+    public partial class UchPr2_3NFEntities5 : DbContext
     {
-        public UchPr2_3NFEntities3()
-            : base("name=UchPr2_3NFEntities3")
+        public UchPr2_3NFEntities5()
+            : base("name=UchPr2_3NFEntities5")
         {
         }
     
