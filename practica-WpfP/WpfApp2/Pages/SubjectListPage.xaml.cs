@@ -68,12 +68,10 @@ namespace WpfApp2.Pages
         private void MultiBTN_Click(object sender, RoutedEventArgs e)
         {
             Discipline discipline = MyList.SelectedItem as Discipline;
-            if (discipline != null)
+            if (MyList.SelectedItem != null)
                 Navigation.NextPage(new PageComponent("Изменения", new Multi_SubjectPage(discipline)));
-            else if (discipline == null)
-            {
-                Navigation.NextPage(new PageComponent("Изменения", new Multi_SubjectPage(discipline)));
-            }
+            else
+                Navigation.NextPage(new PageComponent("Добавление", new Multi_SubjectPage(new Discipline())));
         }
     }
 }

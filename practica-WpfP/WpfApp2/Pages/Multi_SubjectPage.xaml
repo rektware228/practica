@@ -17,16 +17,17 @@
                     <TextBox IsReadOnly="True" Text="{Binding ID_discipline}" x:Name="IdTb" Width="auto"></TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock ><Run Text="Специальность "/></TextBlock>
+                    <TextBlock ><Run Text="Кол-во часов "/></TextBlock>
                     <TextBox Text="{Binding volume}" x:Name="VolumeTb" Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
-                    <TextBlock ><Run Text="Фаилия И. О. "/></TextBlock>
-                    <TextBox Text="{Binding name}" x:Name="LastnameTb" Width="auto"/>
+                    <TextBlock ><Run Text="Наименование "/></TextBlock>
+                    <TextBox Text="{Binding name}" x:Name="nameTb" Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                     <TextBlock ><Run Text="Кафедра "/></TextBlock>
-                    <TextBox Text="{Binding Department.name}" x:Name="DepartmentTb" Width="auto"/>
+                    <ComboBox IsEditable="True" Text="{Binding Department.name}"
+                              x:Name="DepartmentCb" Width="auto"/>
                 </StackPanel>
 
                 <Button  x:Name="SaveBtn"   Margin="0 0 0 10" Click="SaveBtn_Click" Content="Сохранить"/>

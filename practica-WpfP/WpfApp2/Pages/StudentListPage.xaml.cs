@@ -49,7 +49,8 @@ namespace WpfApp2.Pages
             MyList.ItemsSource = objectsSortList.ToList();
             if (SearchTb.Text != null)
             {
-                 objectsSortList = objectsSortList.Where(x => x.lastname.ToLower().Contains(SearchTb.Text.ToLower()) || x.lastname.ToLower().Contains(SearchTb.Text.ToLower()));
+                objectsSortList = objectsSortList.Where(x => x.lastname.ToLower().Contains(SearchTb.Text.ToLower()) || 
+                x.lastname.ToLower().Contains(SearchTb.Text.ToLower()));
                 MyList.ItemsSource = objectsSortList;
             }
           
