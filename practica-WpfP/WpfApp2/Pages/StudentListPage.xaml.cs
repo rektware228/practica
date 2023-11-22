@@ -53,7 +53,9 @@ namespace WpfApp2.Pages
                 x.lastname.ToLower().Contains(SearchTb.Text.ToLower()));
                 MyList.ItemsSource = objectsSortList;
             }
-          
+
+            MyList.ItemsSource = objectsSortList.ToList().Where(x => x.IsDeleted != Convert.ToBoolean(1));
+
         }
 
 
@@ -78,6 +80,18 @@ namespace WpfApp2.Pages
             {
                 Navigation.NextPage(new PageComponent("Изменения", new Multi_StudentPage(student)));
             }
+        }
+
+        private void DeletosBTN_Click(object sender, RoutedEventArgs e)
+        {
+            var stud = (Student)MyList.SelectedItem;
+            if (MyList.SelectedItem != null)
+            {
+                stud.IsDeleted = Convert.ToBoolean(1);
+                Refresh();
+                App.db.SaveChanges();
+            }
+            else MessageBox.Show("Выберите строку!");
         }
     }
 }

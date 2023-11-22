@@ -62,6 +62,11 @@ namespace WpfApp2.Pages
                 (SearchTb.Text.ToLower()));
                 PositionsList.ItemsSource = positionsSortList;
             }
+
+            // PositionsList.ItemsSource = positionsSortList.Where(x => x.IsDeleted != Convert.ToBoolean(1));
+
+
+            PositionsList.ItemsSource = positionsSortList.ToList().Where(x => x.IsDeleted != Convert.ToBoolean(1));
         }
 
         private void MultiBTN_Click(object sender, RoutedEventArgs e)
@@ -69,9 +74,33 @@ namespace WpfApp2.Pages
             Positions positions = PositionsList.SelectedItem as Positions;
             if (PositionsList.SelectedItem != null)
                 Navigation.NextPage(new PageComponent("Изменение", new Multi_TeacherPage(positions)));
-            else 
+            else
                 Navigation.NextPage(new PageComponent("Добавление", new Multi_TeacherPage(new Positions())));
-            
+
+        }
+
+        private void DeletosBTN_Click(object sender, RoutedEventArgs e)
+        {
+            var emp = (Positions)PositionsList.SelectedItem;
+            if (PositionsList.SelectedItem == null)
+            {
+                PositionsList.SelectedItem = emp;
+                MessageBox.Show("Выберите нужную строку");
+            }
+            else
+            {
+                if (emp.shef != emp.ID_positions)
+                {
+                    emp.IsDeleted = Convert.ToBoolean(1);
+                    Refresh();
+                    App.db.SaveChanges();
+                }
+                else
+                {
+                    MessageBox.Show("Нельзя удалять себе подобных");
+                }
+            }
+
         }
     }
 }

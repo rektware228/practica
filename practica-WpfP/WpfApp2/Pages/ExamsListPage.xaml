@@ -44,6 +44,7 @@
         </StackPanel>
         <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
             <Button x:Name="MultiBTN" Click="MultiBTN_Click">Изменение таблицы</Button>
+            <Button x:Name="DeletosBTN" Margin="15 0 0 0" Click="DeletosBTN_Click">Удаление</Button>
         </StackPanel>
     </Grid>
 </Page>

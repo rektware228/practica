@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 using WpfApp2.Components;
 using WpfApp2.Databases;
 using static WpfApp2.Components.Navigation;
@@ -49,11 +50,11 @@ namespace WpfApp2.Pages
             {
                 if (SortCb.SelectedIndex == 1)
                     disSortList = disSortList.Where(x => x.volume >= 0 && x.volume < 80);
-                else if (SortCb.SelectedIndex == 2)               
+                else if (SortCb.SelectedIndex == 2)
                     disSortList = disSortList.Where(x => x.volume >= 80 && x.volume < 160);
-                else if (SortCb.SelectedIndex == 3)               
+                else if (SortCb.SelectedIndex == 3)
                     disSortList = disSortList.Where(x => x.volume >= 160 && x.volume < 320);
-                else if (SortCb.SelectedIndex == 4)               
+                else if (SortCb.SelectedIndex == 4)
                     disSortList = disSortList.Where(x => x.volume >= 320 && x.volume <= 640);
             }
             MyList.ItemsSource = disSortList.ToList();
@@ -62,7 +63,8 @@ namespace WpfApp2.Pages
                 disSortList = disSortList.Where(x => x.name.ToLower().Contains(SearchTb.Text.ToLower()) || x.name.ToLower().Contains(SearchTb.Text.ToLower()));
                 MyList.ItemsSource = disSortList;
             }
-           
+            MyList.ItemsSource = disSortList.ToList().Where(x => x.IsDeleted != Convert.ToBoolean(1));
+
         }
 
         private void MultiBTN_Click(object sender, RoutedEventArgs e)
@@ -72,6 +74,18 @@ namespace WpfApp2.Pages
                 Navigation.NextPage(new PageComponent("Изменения", new Multi_SubjectPage(discipline)));
             else
                 Navigation.NextPage(new PageComponent("Добавление", new Multi_SubjectPage(new Discipline())));
+        }
+
+        private void DeletosBTN_Click(object sender, RoutedEventArgs e)
+        {
+            var subject = (Discipline)MyList.SelectedItem;
+            if (MyList.SelectedItem != null)
+            {
+                subject.IsDeleted = Convert.ToBoolean(1);
+                Refresh();
+                App.db.SaveChanges();
+            }
+            else MessageBox.Show("Выберите строку!");
         }
     }
 }

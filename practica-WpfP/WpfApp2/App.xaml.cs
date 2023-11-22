@@ -14,11 +14,15 @@ namespace WpfApp2
     /// </summary>
     public partial class App : System.Windows.Application
     {
-        public static UchPr2_3NFEntities5 db = new UchPr2_3NFEntities5();
+        public static UchPr2_3NFEntities6 db = new UchPr2_3NFEntities6();
+
         public static bool IsStudent = false; //вход студента
-        //public static bool IsTeacher = false; //вход учителя
-        //public static bool IsHeadDepartment = false; //вход зава кафедры
+
         public static bool IsTeacher = false; //вход учителя
+
+        public static bool IsHeadDepartment = false; //вход зава кафедры
+
+        public static bool IsEngineer = false; //вход инженера
 
     }
 }

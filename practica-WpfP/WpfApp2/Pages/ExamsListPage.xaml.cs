@@ -64,6 +64,7 @@ namespace WpfApp2.Pages
                 (SearchTb.Text.ToLower()));
                 ExamsList.ItemsSource = examSortList;
             }
+            ExamsList.ItemsSource = examSortList.ToList().Where(x => x.IsDeleted != Convert.ToBoolean(1));
         }
 
         private void MultiBTN_Click(object sender, RoutedEventArgs e)
@@ -81,9 +82,25 @@ namespace WpfApp2.Pages
 
         }
 
-        private void ExamsList_Selected(object sender, RoutedEventArgs e)
+        private void DeletosBTN_Click(object sender, RoutedEventArgs e)
         {
+            var exm = (Exam)ExamsList.SelectedItem;
+            if (ExamsList.SelectedItem != null)
+            {
+                exm.IsDeleted = Convert.ToBoolean(1);
+                Refresh();
+                App.db.SaveChanges();
+            }
+            else MessageBox.Show("Выберите строку!");
+
             
+
+
+
+
         }
+
+
+
     }
 }

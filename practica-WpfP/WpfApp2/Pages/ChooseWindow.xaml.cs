@@ -26,6 +26,19 @@ namespace WpfApp2.Pages
         public ChooseWindow()
         {
             InitializeComponent();
+            if (App.IsTeacher == true )
+            {
+                EmployeeBTN.Visibility = Visibility.Collapsed;
+                StudentBTN.Visibility = Visibility.Collapsed;
+                SubjectsBTN.Visibility = Visibility.Collapsed;
+            }
+            if (App.IsEngineer == true )
+            {
+                ExamsBTN.Visibility = Visibility.Collapsed;
+                StudentBTN.Visibility = Visibility.Collapsed;
+                SubjectsBTN.Visibility = Visibility.Collapsed;
+            }
+            if (App.IsTeacher == true )
         }
 
         private void StudentBTN_Click(object sender, RoutedEventArgs e)
