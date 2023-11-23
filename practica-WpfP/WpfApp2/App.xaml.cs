@@ -20,9 +20,9 @@ namespace WpfApp2
 
         public static bool IsTeacher = false; //вход учителя
 
-        public static bool IsHeadDepartment = false; //вход зава кафедры
-
         public static bool IsEngineer = false; //вход инженера
+
+        public static bool IsOwner = false; /// full 
 
     }
 }

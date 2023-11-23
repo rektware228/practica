@@ -30,13 +30,19 @@ namespace WpfApp2.Pages
             InitializeComponent();
             MyList.ItemsSource = App.db.Student.ToList();
             Refresh();
+            if (App.IsTeacher == true)
+            {
+                DeletosBTN.Visibility = Visibility.Hidden;
+                MultiBTN.Visibility = Visibility.Hidden;
+            }
         }
         private void Refresh()
 
-        {   IEnumerable<Student> objectsSortList = App.db.Student.ToList();
-            if(SortCb.SelectedIndex != 0)
+        {
+            IEnumerable<Student> objectsSortList = App.db.Student.ToList();
+            if (SortCb.SelectedIndex != 0)
             {
-                if(SortCb.SelectedIndex == 1)
+                if (SortCb.SelectedIndex == 1)
                 {
                     objectsSortList = objectsSortList.OrderBy(x => x.lastname);
                 }
@@ -49,7 +55,7 @@ namespace WpfApp2.Pages
             MyList.ItemsSource = objectsSortList.ToList();
             if (SearchTb.Text != null)
             {
-                objectsSortList = objectsSortList.Where(x => x.lastname.ToLower().Contains(SearchTb.Text.ToLower()) || 
+                objectsSortList = objectsSortList.Where(x => x.lastname.ToLower().Contains(SearchTb.Text.ToLower()) ||
                 x.lastname.ToLower().Contains(SearchTb.Text.ToLower()));
                 MyList.ItemsSource = objectsSortList;
             }
@@ -65,7 +71,7 @@ namespace WpfApp2.Pages
             Refresh();
         }
 
-       
+
         private void SortCb_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
             Refresh();

@@ -9,15 +9,14 @@
       Title="ChooseWindow">
 
     <Grid>
-        <StackPanel Width="340" Orientation="Horizontal" VerticalAlignment="Center">
-            <StackPanel HorizontalAlignment="Center">
+        <StackPanel Width="340" Orientation="Vertical" VerticalAlignment="Center">
+            
                 <Button Width="160" x:Name="StudentBTN" Click="StudentBTN_Click">Список студентов</Button>
                 <Button Width="160" x:Name="EmployeeBTN" Click="EmployeeBTN_Click">Список сотрудников</Button>
-            </StackPanel>
-            <StackPanel HorizontalAlignment="Center">
+            
                 <Button Width="160" x:Name="ExamsBTN" Click="ExamsBTN_Click">Экзамены</Button>
                 <Button Width="160" x:Name="SubjectsBTN" Click="SubjectsBTN_Click" >Дисциплины</Button>
-            </StackPanel>
+            
 
         </StackPanel>
     </Grid>

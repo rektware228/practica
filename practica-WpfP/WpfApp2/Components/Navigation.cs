@@ -18,7 +18,7 @@ namespace WpfApp2.Components
             mainWindow.BackBTN.Visibility = components.Count() >
             1 ? System.Windows.Visibility.Visible :
             System.Windows.Visibility.Hidden;
-            mainWindow.ExitBTN.Visibility = App.IsTeacher ?
+            mainWindow.ExitBTN.Visibility = App.IsTeacher || App.IsTeacher || App.IsStudent || App.IsEngineer || App.IsOwner?
             System.Windows.Visibility.Visible :
             System.Windows.Visibility.Hidden;
             mainWindow.MyFrame.Navigate(pageComponent.Page);
@@ -40,6 +40,10 @@ namespace WpfApp2.Components
         public static void ClearHistory()
         {
             App.IsTeacher = false;
+            App.IsStudent = false;
+            App.IsEngineer = false;
+            App.IsOwner = false;
+
             components.Clear();
         }
         public class PageComponent /// нужен для хранения заголовка и страницы

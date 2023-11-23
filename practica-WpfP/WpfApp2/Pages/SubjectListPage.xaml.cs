@@ -32,6 +32,11 @@ namespace WpfApp2.Pages
             MyList.ItemsSource = App.db.Discipline.ToList();
             Refresh();
 
+            if(App.IsStudent == true)
+            {
+                MultiBTN.Visibility = Visibility.Hidden;
+                DeletosBTN.Visibility = Visibility.Hidden;
+            }
         }
 
         private void SearchTb_TextChanged(object sender, TextChangedEventArgs e)

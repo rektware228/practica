@@ -32,23 +32,39 @@ namespace WpfApp2.Pages
             NavigationService.RemoveBackEntry();
             App.IsTeacher = false;
             App.IsStudent = false;
-            if (PasswordPb.Password == "a" && LoginTb.Text == "a")
+            App.IsEngineer = false;
+            App.IsOwner = false;
+
+            if (LoginTb.Text  == "admin" &&  PasswordPb.Password== "1")
+            {
+                App.IsOwner = true;
+                MessageBox.Show("Вы вошли как FULL STACK Разработчик");
+                Navigation.NextPage(new PageComponent("Выбор страниц", new ChooseWindow()));
+            }
+
+            if (LoginTb.Text  == "tea" && PasswordPb.Password == "1")
             {
                 App.IsTeacher = true;
                 MessageBox.Show("Вы вошли как учитель");
                 Navigation.NextPage(new PageComponent("Выбор страниц", new ChooseWindow()));
             }
 
-            else if (PasswordPb.Password == "kirill" && LoginTb.Text == "kirill")
+            if (LoginTb.Text == "eng" && PasswordPb.Password == "1")
+            {
+                App.IsEngineer = true;
+                MessageBox.Show("Вы вошли как инженер");
+                Navigation.NextPage(new PageComponent("Выбор страниц", new ChooseWindow()));
+            }
+
+            if (LoginTb.Text == "stu" && PasswordPb.Password == "1")
             {
                 App.IsStudent = true;
                 MessageBox.Show("Вы вошли как ученик");
                 Navigation.NextPage(new PageComponent("Выбор страниц", new ChooseWindow()));
             }
-
-            else if(PasswordPb.Password == null && LoginTb.Text == null)
-                { MessageBox.Show("Доступ запрещен!");
-            }
+            
+            
         }
     }
 }
+

@@ -30,6 +30,8 @@ namespace WpfApp2.Pages
             IdTb.DataContext = student;
             SpecialityTb.DataContext = student;
             LastnameTb.DataContext = student;
+
+            
         }
 
         private void SaveBtn_Click(object sender, RoutedEventArgs e)

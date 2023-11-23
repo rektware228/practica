@@ -28,17 +28,21 @@ namespace WpfApp2.Pages
             InitializeComponent();
             if (App.IsTeacher == true )
             {
-                EmployeeBTN.Visibility = Visibility.Collapsed;
-                StudentBTN.Visibility = Visibility.Collapsed;
-                SubjectsBTN.Visibility = Visibility.Collapsed;
+                EmployeeBTN.Visibility = Visibility.Hidden;
+                SubjectsBTN.Visibility = Visibility.Hidden;
             }
             if (App.IsEngineer == true )
             {
-                ExamsBTN.Visibility = Visibility.Collapsed;
-                StudentBTN.Visibility = Visibility.Collapsed;
-                SubjectsBTN.Visibility = Visibility.Collapsed;
+                EmployeeBTN.Visibility = Visibility.Hidden;
+                SubjectsBTN.Visibility = Visibility.Hidden;
+                ExamsBTN.Visibility = Visibility.Hidden;
             }
-            if (App.IsTeacher == true )
+            if (App.IsStudent == true)
+            {
+                EmployeeBTN.Visibility = Visibility.Hidden;
+                ExamsBTN.Visibility = Visibility.Hidden;
+                StudentBTN.Visibility = Visibility.Hidden;
+            }
         }
 
         private void StudentBTN_Click(object sender, RoutedEventArgs e)
