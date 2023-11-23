@@ -65,6 +65,11 @@ namespace WpfApp2.Pages
             
             
         }
+
+        private void QRBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Navigation.NextPage(new PageComponent("QR-code",new QR()));
+        }
     }
 }
 

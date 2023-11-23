@@ -18,7 +18,8 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                     <TextBlock ><Run Text="Специальность "/></TextBlock>
-                    <TextBox Text="{Binding Speciality.direction}" x:Name="SpecialityTb" Width="auto"/>
+                    <ComboBox IsEditable="True" Text="{Binding Speciality.direction}"
+                    x:Name="SpecialityCb" Width="auto"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                     <TextBlock ><Run Text="Фаилия И. О. "/></TextBlock>
@@ -26,7 +27,7 @@
                 </StackPanel>
                 
                 <Button  x:Name="SaveBtn"   Margin="0 0 0 10" Click="SaveBtn_Click" Content="Сохранить"/>
-                <Button  x:Name="DeleteBtn" Content="Удалить" Click="DeleteBtn_Click"/>
+
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -80,12 +80,11 @@ namespace WpfApp2.Pages
         private void MultiBTN_Click(object sender, RoutedEventArgs e)
         {
             Student student = MyList.SelectedItem as Student;
-            if (student != null)
+            if (MyList.SelectedItem != null)
                 Navigation.NextPage(new PageComponent("Изменения", new Multi_StudentPage(student)));
-            else if (student == null)
-            {
-                Navigation.NextPage(new PageComponent("Изменения", new Multi_StudentPage(student)));
-            }
+            else 
+               Navigation.NextPage(new PageComponent("Изменения", new Multi_StudentPage(new Student())));
+            
         }
 
         private void DeletosBTN_Click(object sender, RoutedEventArgs e)

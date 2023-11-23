@@ -14,7 +14,7 @@
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5" x:Name="IdentityStack">
                     <TextBlock><Run Text="Идентификатор "/></TextBlock>
-                    <TextBox  Text="{Binding ID_positions}" x:Name="IdTb" Width="auto"></TextBox>
+                    <TextBox IsReadOnly="True"  Text="{Binding ID_positions}" x:Name="IdTb" Width="auto"></TextBox>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
@@ -41,7 +41,7 @@
                 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
                     <TextBlock ><Run Text="Шеф "/></TextBlock>
-                    <ComboBox IsEditable="True" Text="{Binding name}" x:Name="ShefCb" Width="auto"/>
+                    <ComboBox IsEditable="True"  x:Name="ShefCb" Width="auto"/>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
@@ -50,7 +50,7 @@
                 </StackPanel>
 
                 <Button  x:Name="SaveBtn"   Margin="0 0 0 10" Click="SaveBtn_Click" Content="Сохранить"/>
-                <Button  x:Name="DeleteBtn" Content="Удалить" Click="DeleteBtn_Click"/>
+     
             </StackPanel>
         </StackPanel>
     </Grid>

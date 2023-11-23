@@ -118,7 +118,7 @@
           <Property Name="name" Type="nvarchar" MaxLength="100" />
           <Property Name="ID_department" Type="int" />
           <Property Name="ID_title" Type="int" />
-          <Property Name="salary" Type="decimal" Precision="10" Scale="2" />
+          <Property Name="salary" Type="int" />
           <Property Name="shef" Type="int" />
           <Property Name="experience" Type="int" />
           <Property Name="IsDeleted" Type="bit" />
@@ -512,7 +512,7 @@
           <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ID_department" Type="Int32" />
           <Property Name="ID_title" Type="Int32" />
-          <Property Name="salary" Type="Decimal" Precision="10" Scale="2" />
+          <Property Name="salary" Type="Int32" />
           <Property Name="shef" Type="Int32" />
           <Property Name="experience" Type="Int32" />
           <Property Name="IsDeleted" Type="Boolean" />
@@ -717,7 +717,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="UchPr2_3NFEntities6" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="UchPr2_3NFEntities10" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Academics" EntityType="Self.Academics" />
           <EntitySet Name="Application" EntityType="Self.Application" />
           <EntitySet Name="Countries" EntityType="Self.Countries" />
@@ -789,7 +789,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище UchPr2_3NFModelContainer" CdmEntityContainer="UchPr2_3NFEntities6">
+        <EntityContainerMapping StorageEntityContainer="Хранилище UchPr2_3NFModelContainer" CdmEntityContainer="UchPr2_3NFEntities10">
           <EntitySetMapping Name="Academics">
             <EntityTypeMapping TypeName="UchPr2_3NFModel.Academics">
               <MappingFragment StoreEntitySet="Academics">

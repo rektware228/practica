@@ -41,7 +41,7 @@
                     <TextBox Text="{Binding score}" x:Name="ScoreTb" Width="auto"/>
                 </StackPanel>
                 <Button  x:Name="SaveBtn"   Margin="0 0 0 10" Click="SaveBtn_Click" Content="Сохранить"/>
-                <Button  x:Name="DeleteBtn" Content="Удалить"/>
+
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -31,7 +31,7 @@
                 </StackPanel>
 
                 <Button  x:Name="SaveBtn"   Margin="0 0 0 10" Click="SaveBtn_Click" Content="Сохранить"/>
-                <Button  x:Name="DeleteBtn" Content="Удалить" Click="DeleteBtn_Click"/>
+
             </StackPanel>
         </StackPanel>
     </Grid>

@@ -15,6 +15,7 @@
             <TextBlock>Пароль</TextBlock>
             <PasswordBox x:Name="PasswordPb"  Margin="5" Height="30"></PasswordBox>
             <Button IsDefault = "true" x:Name="EnterBtn" Click="EnterBtn_Click">Войти</Button>
+            <Button IsDefault = "true" x:Name="QRBtn" Click="QRBtn_Click" >QR-code</Button>
         </StackPanel>
     </Grid>
 </Page>

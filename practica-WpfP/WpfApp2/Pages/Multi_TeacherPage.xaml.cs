@@ -27,17 +27,21 @@ namespace WpfApp2.Pages
         public Multi_TeacherPage(Positions _positions)
         {
             InitializeComponent();
+            
+
             positions = _positions;
             this.DataContext = positions;
-
+            
             DepartmentCb.ItemsSource = App.db.Department.ToList();
             DepartmentCb.DisplayMemberPath = "name";
 
             SpecialityCb.ItemsSource = App.db.Title.ToList();
             SpecialityCb.DisplayMemberPath = "name";
 
-            ShefCb.ItemsSource = App.db.Positions.ToList().Where(x => x.ID_positions == x.shef);
-            ShefCb.DisplayMemberPath = "name";
+            ShefCb.ItemsSource = App.db.Positions.ToList();
+            ShefCb.DisplayMemberPath = "ID_positions";
+            
+          
 
         }
 
@@ -49,34 +53,40 @@ namespace WpfApp2.Pages
             var selectPosition = SpecialityCb.SelectedItem as Title;
             var selectChief = ShefCb.SelectedItem as Positions;
 
-            if (selectLectern == null || selectPosition == null || IdTb.Text == "0" || NameTb.Text == "" || SalaryTb.Text == "" || selectChief == null)
-            {
-                errors = true; if (NameTb.Text == "кириешки") MessageBox.Show("какие нафиг кириешки?!");
-                MessageBox.Show("Заполните обязательные данные!");
-            }
-            if (IdTb.Text.Length < 3)
+            if (selectLectern == null || selectPosition == null ||
+                NameTb.Text == "" || SalaryTb.Text == "" || selectChief == null)
             {
                 errors = true;
-                MessageBox.Show("Длина таб.номера должна быть 3 символа!");
+                MessageBox.Show("Заполните обязательные данные!");
             }
+            
             if (App.db.Positions.Any(x => x.ID_positions == positions.ID_positions) && WhatToDo == "add")
             {
                 errors = true;
                 MessageBox.Show("Такой таб.номер уже есть!");
             }
+
+            if (ExpTb.Text == "")
+            {
+                ExpTb.Text = Convert.ToString(0);
+            }
+
+         
             if (!errors)
             {
-                if (WhatToDo == "add")
+                if (!errors)
                 {
                     App.db.Positions.Add(new Positions()
                     {
-                       ID_positions = positions.ID_positions,
+                        ID_positions = positions.ID_positions,
                         ID_department = selectLectern.ID_department,
                         name = NameTb.Text,
                         ID_title = selectPosition.ID_title,
-                        salary = decimal.Parse(SalaryTb.Text),
-                        shef = selectChief.ID_positions,
+                        salary = int.Parse(SalaryTb.Text),
+                        shef = Convert.ToInt32(ShefCb.Text),
+                        experience = Convert.ToInt32(ExpTb.Text),
                         IsDeleted = Convert.ToBoolean(0)
+                        
                     });
                 }
                 if (selectPosition != null)

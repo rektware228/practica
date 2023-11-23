@@ -56,7 +56,7 @@ namespace WpfApp2.Pages
         {
             bool errors = false;
             var selectLec = DepartmentCb.SelectedItem as Department;
-            if (selectLec == null  || nameTb.Text == "" || VolumeTb.Text == "")
+            if (selectLec == null || nameTb.Text == "" || VolumeTb.Text == "")
             {
                 errors = true;
                 MessageBox.Show("Заполните обязательные данные!");
@@ -74,7 +74,7 @@ namespace WpfApp2.Pages
 
             if (!errors)
             {
-                if (WhatToDo == "add")
+                if (!errors)
                 {
                     App.db.Discipline.Add(new Discipline()
                     {
@@ -85,11 +85,13 @@ namespace WpfApp2.Pages
                         IsDeleted = Convert.ToBoolean(0)
                     });
                 }
-                if (selectLec != null) 
-                discipline.ID_discipline = selectLec.ID_department;
-                MessageBox.Show("Сохранено!");
-                App.db.SaveChanges();
-                NavigationService.Navigate(new SubjectListPage());
+                if (selectLec != null)
+                {
+                    MessageBox.Show("Сохранено!");
+                    App.db.SaveChanges();
+                    NavigationService.Navigate(new SubjectListPage());
+                }
+
             }
         }
     }

@@ -27,6 +27,13 @@ namespace WpfApp2.Pages
         public TeacherListPage()
         {
             InitializeComponent();
+            foreach (var a in App.db.Positions)
+            {
+                if (a == null)
+                {
+                    a.experience = 0;
+                }
+            }
             PositionsList.ItemsSource = App.db.Positions.ToList();
             Refresh();
         }

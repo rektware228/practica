@@ -24,7 +24,7 @@ namespace WpfApp2.Databases
         public string name { get; set; }
         public Nullable<int> ID_department { get; set; }
         public Nullable<int> ID_title { get; set; }
-        public Nullable<decimal> salary { get; set; }
+        public Nullable<int> salary { get; set; }
         public Nullable<int> shef { get; set; }
         public Nullable<int> experience { get; set; }
         public Nullable<bool> IsDeleted { get; set; }

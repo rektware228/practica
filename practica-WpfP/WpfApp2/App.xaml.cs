@@ -14,7 +14,7 @@ namespace WpfApp2
     /// </summary>
     public partial class App : System.Windows.Application
     {
-        public static UchPr2_3NFEntities6 db = new UchPr2_3NFEntities6();
+        public static UchPr2_3NFEntities10 db = new UchPr2_3NFEntities10();
 
         public static bool IsStudent = false; //вход студента
 
